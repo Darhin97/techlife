@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
 
 const navItems = [
   { name: "Services", href: "#services" },
@@ -42,9 +43,17 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            <Link href="/" className="text-[#1862AF] font-bold text-xl">
-              Tech<span className="text-[#EF7F0D]">Solutions</span>
+          <div className="flex items-center relative">
+            <Link href="/" className="text-[#1862AF] font-bold text-xl ">
+              <div className={"relative w-10 h-10 "}>
+                {/*Tech<span className="text-[#EF7F0D]">Solutions</span>*/}
+                <Image
+                  src={"logo.jpeg"}
+                  alt={"logo"}
+                  objectFit={"cover"}
+                  fill
+                />
+              </div>
             </Link>
           </div>
 
