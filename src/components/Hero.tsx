@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -45,7 +46,7 @@ export function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1521790361543-f645cf042ec4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
               alt="IT professional consulting with client"
               className="rounded-lg shadow-xl"

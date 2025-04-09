@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function About() {
   const stats = [
@@ -20,7 +21,7 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1563770660941-20978e870e26?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
               alt="IT consultants in a meeting"
               className="rounded-lg shadow-lg"

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { testimonials } from "@/lib/data";
+import Image from "next/image";
 
 export function Testimonials() {
   const container = {
@@ -39,7 +40,7 @@ export function Testimonials() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Here's what businesses like yours think about our comparison
+            Here&apos;s what businesses like yours think about our comparison
             service.
           </motion.p>
         </div>
@@ -73,11 +74,11 @@ export function Testimonials() {
                 </div>
               </div>
               <p className="text-slate-600 dark:text-slate-300 mb-6">
-                "{testimonial.content}"
+                &quot;{testimonial.content}&quot;
               </p>
               <div className="flex items-center">
                 <div className="mr-4">
-                  <img
+                  <Image
                     className="h-10 w-10 rounded-full"
                     src={testimonial.avatarUrl}
                     alt={testimonial.name}
