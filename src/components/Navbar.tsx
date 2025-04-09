@@ -38,17 +38,17 @@ export function Navbar() {
     <header
       className={cn(
         "sticky top-0 z-50 bg-white transition-shadow duration-200",
-        scrolled && "shadow-sm",
+        scrolled && "shadow-sm"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center relative">
             <Link href="/" className="text-[#1862AF] font-bold text-xl ">
-              <div className={"relative w-10 h-10 "}>
+              <div className={"relative w-32 h-32 "}>
                 {/*Tech<span className="text-[#EF7F0D]">Solutions</span>*/}
                 <Image
-                  src={"logo.jpeg"}
+                  src={"/logo.jpeg"}
                   alt={"logo"}
                   objectFit={"cover"}
                   fill

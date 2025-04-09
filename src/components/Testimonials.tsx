@@ -77,11 +77,12 @@ export function Testimonials() {
                 &quot;{testimonial.content}&quot;
               </p>
               <div className="flex items-center">
-                <div className="mr-4">
+                <div className="mr-4 relative h-10 w-10">
                   <Image
-                    className="h-10 w-10 rounded-full"
+                    className=" rounded-full"
                     src={testimonial.avatarUrl}
                     alt={testimonial.name}
+                    fill
                   />
                 </div>
                 <div>
