@@ -17,35 +17,37 @@ const navItems = [
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 10) {
+  //       setScrolled(true);
+  //     } else {
+  //       setScrolled(false);
+  //     }
+  //   };
+  //
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
 
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 bg-white transition-shadow duration-200",
-        scrolled && "shadow-sm"
+        "sticky top-0 z-50 bg-white transition-shadow duration-200 shadow-sm",
+        // scrolled && "shadow-sm"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center relative">
             <Link href="/" className="text-[#1862AF] font-bold text-xl ">
-              <div className={"relative w-32 h-32 "}>
+              <div className={"relative w-32 h-16 "}>
                 {/*Tech<span className="text-[#EF7F0D]">Solutions</span>*/}
                 <Image
                   src={"/logo.jpeg"}
